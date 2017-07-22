@@ -16,3 +16,4 @@ function countSameElements(collection) {
       }
   }
   return result;
+}
