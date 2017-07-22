@@ -1,5 +1,14 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
+   for(let i=0;i<collectionA.length;i++){
+      if(objectB.value.indexOf(collectionA[i].key)>-1){
+          let n=collectionA[i].count;
+          while(n>=3){
+              collectionA[i].count--; 
+              n-=3;
+          }
+      }          
+   }
+   return collectionA;
 }
