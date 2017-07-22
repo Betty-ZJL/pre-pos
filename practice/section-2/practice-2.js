@@ -18,7 +18,8 @@ function countSameElements(collection) {
       }
       if(flag==1){
           result.push({key:x,count:1});
-      }if(flag==2){
+      }
+      if(flag==2){
           result.push({key:x,count:n});
       }
   }
