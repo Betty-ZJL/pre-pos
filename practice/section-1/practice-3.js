@@ -1,9 +1,5 @@
 'use strict';
 
 function collectSameElements(collectionA, objectB) {
-  var result=[];
-  for(let i=0;i<collectionA.length;i++)
-      if(objectB.value.indexOf(collectionA[i])>-1)
-          result.push(collectionA[i]);
-  return result;
+  return collectionA.filter( function (t) { return objectB['value'].includes(t) });
 }

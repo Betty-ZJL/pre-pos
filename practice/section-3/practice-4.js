@@ -23,14 +23,8 @@ function createUpdatedCollection(collectionA, objectB) {
           collectionC.push({key:x,count:n});
       }
   }
-  for(let i=0;i<collectionC.length;i++){
-      if(objectB.value.indexOf(collectionC[i].key)>-1){
-          let n=collectionC[i].count;
-          while(n>=3){
-              collectionC[i].count--; 
-              n-=3;
-          }
-      }          
-  }
+  for(let item of collectionC)
+    if(objectB['value'].includes(item.key))
+      item.count-=parseInt(item.count/3);
   return collectionC;
 }
